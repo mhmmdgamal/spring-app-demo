@@ -11,7 +11,9 @@ pipeline {
             }
         }
         stage('Checkout from git') {
-            git branch: 'master', credentialsId: 'github', url: 'https://github.com/mhmmdgamal/spring-app-demo.git'
+            steps {
+                git branch: 'master', credentialsId: 'github', url: 'https://github.com/mhmmdgamal/spring-app-demo.git'
+            }
         }
     }
 }
