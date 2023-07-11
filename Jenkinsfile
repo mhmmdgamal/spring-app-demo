@@ -15,5 +15,15 @@ pipeline {
                 git branch: 'master', credentialsId: 'github', url: 'https://github.com/mhmmdgamal/spring-app-demo.git'
             }
         }
+        stage('Build App') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+        stage('Test App') {
+            steps {
+                sh 'mvn test'
+            }
+        }
     }
 }
