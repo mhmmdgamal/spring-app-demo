@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: demo
-          image: nexus-repo1.carbon-k8s.online:443/demo:latest
+          image: nexus-repo1.carbon-k8s.online/demo:latest
           imagePullPolicy: Always
           ports:
           - containerPort: 8080
