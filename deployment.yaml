@@ -43,9 +43,9 @@ spec:
 ---
 apiVersion: v1
 kind: Secret
-metadata:
-  name: nexus-repo
-type: Opaque
 data:
-  username: YWRtaW4=
-  password: TiFAI2V4dXM5
+  .dockerconfigjson: eyJhdXRocyI6eyJuZXh1cy1yZXBvMS5jYXJib24tazhzLm9ubGluZSI6eyJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiJOIUAjZXh1czkiLCJhdXRoIjoiWVdSdGFXNDZUaUZBSTJWNGRYTTUifX19
+metadata:
+  creationTimestamp: null
+  name: nexes-repo
+type: kubernetes.io/dockerconfigjson
