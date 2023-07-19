@@ -9,13 +9,11 @@ spec:
     type: Recreate
   selector:
     matchLabels:
-      app: demo
-      
+      app: demo   
   template:
     metadata:
       labels:
         app: demo
-        tier: demo
     spec:
       containers:
         - name: demo
@@ -23,8 +21,7 @@ spec:
           imagePullPolicy: Always
           ports:
           - containerPort: 8080
-            name: demo
-            
+            name: demo   
 ---
 apiVersion: v1
 kind: Service
@@ -38,5 +35,4 @@ spec:
       targetPort: 8080
   selector:
     app: demo
-    tier: demo
   type: LoadBalancer
