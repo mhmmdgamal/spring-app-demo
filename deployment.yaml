@@ -22,6 +22,8 @@ spec:
           ports:
             - containerPort: 8080
               name: demo
+          imagePullSecrets:
+            - name: nexusRepo
 ---
 apiVersion: v1
 kind: Service
@@ -36,3 +38,13 @@ spec:
   selector:
     app: demo
   type: LoadBalancer
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: nexusRepo
+type: Opaque
+data:
+  username: admin
+  password: N!@#exus9  
