@@ -23,7 +23,7 @@ spec:
             - containerPort: 8080
               name: demo
       imagePullSecrets:
-        - name: nexusRepo
+        - name: nexus-repo
 
 ---
 apiVersion: v1
@@ -44,7 +44,7 @@ spec:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: nexusRepo
+  name: nexus-repo
 type: Opaque
 data:
   username: YWRtaW4=
